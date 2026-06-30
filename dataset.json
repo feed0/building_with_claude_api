@@ -1,11 +1,14 @@
 [
   {
-    "task": "Write a Python function that extracts the AWS region from an S3 bucket ARN (e.g., 'arn:aws:s3:::my-bucket'). The function should return the region if present, or 'us-east-1' as the default."
+    "task": "Parse an AWS S3 bucket name from a full S3 URI (e.g., 's3://my-bucket/path/to/file.txt') and extract just the bucket name",
+    "format": "regex"
   },
   {
-    "task": "Create a JSON CloudFormation template snippet that defines an IAM role with a trust policy allowing the EC2 service to assume it."
+    "task": "Create a JSON configuration object for an AWS Lambda function that specifies the runtime as 'python3.11', timeout as 60 seconds, and memory as 256 MB",
+    "format": "json"
   },
   {
-    "task": "Write a regular expression that validates an AWS access key ID format (starts with 'AKIA' followed by 20 alphanumeric characters)."
+    "task": "Write a Python function that takes an AWS IAM ARN string and returns the resource name (the part after the last forward slash)",
+    "format": "python"
   }
 ]
