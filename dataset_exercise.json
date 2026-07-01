@@ -1,0 +1,17 @@
+[
+  {
+    "task": "Extract all AWS S3 bucket names from CloudFormation template resource names that follow the pattern 'MyBucket[BucketName]Stack'",
+    "format": "regex",
+    "solution_criteria": "A regex pattern that captures bucket name identifiers from resource names like 'MyBucketDataStack' or 'MyBucketLogsStack', extracting only the middle portion (e.g., 'Data', 'Logs')"
+  },
+  {
+    "task": "Create a Python function that validates an AWS IAM policy statement and returns True if it contains both 'Effect' and 'Action' fields, False otherwise",
+    "format": "python",
+    "solution_criteria": "A function that accepts a dictionary representing an IAM policy statement, checks for the presence of required 'Effect' and 'Action' keys, and returns a boolean value"
+  },
+  {
+    "task": "Generate a JSON configuration object for an AWS Lambda function that includes environment variables for database connection (host, port, database name) and logging level",
+    "format": "json",
+    "solution_criteria": "A valid JSON object with a nested 'Environment' section containing 'Variables' with keys for 'DB_HOST', 'DB_PORT', 'DB_NAME', and 'LOG_LEVEL', each with appropriate example values"
+  }
+]
