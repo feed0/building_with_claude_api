@@ -1,0 +1,50 @@
+[
+  {
+    "prompt_inputs": {
+      "height": "180",
+      "weight": "72",
+      "goal": "Marathon preparation with carbohydrate loading for high-intensity endurance training",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains 4-5 meals/snacks optimized for energy density and sustained fuel delivery",
+      "Carbohydrates comprise 60-70% of total calories with emphasis on complex carbs and natural sugars",
+      "Total daily caloric intake aligns with elevated endurance athlete requirements (approximately 3,000-3,500 calories)",
+      "Plan is presented in compact, concise format suitable for 1-day consumption"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-intensity endurance athlete (marathon runner) who requires elevated calorie intake and carbohydrate loading, verifying the meal plan prioritizes energy density and sustained fuel"
+  },
+  {
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Muscle building during bulk phase with emphasis on protein distribution",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan contains exactly 4-5 meals distributed throughout the day",
+      "Each meal contains 30-40g of protein with at least 3 meals meeting this target",
+      "Total daily calories create a surplus of 300-500 calories above maintenance for muscle building",
+      "Plan is presented in compact, easy-to-read format suitable for a single day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) during a bulk phase, ensuring the meal plan emphasizes protein distribution across meals and includes strategic caloric surplus for muscle building"
+  },
+  {
+    "prompt_inputs": {
+      "height": "198",
+      "weight": "95",
+      "goal": "optimize athletic performance and recovery for basketball",
+      "restrictions": "vegetarian"
+    },
+    "solution_criteria": [
+      "Meal plan covers all meals for one full day in compact format",
+      "All meals are vegetarian with no meat, poultry, or fish",
+      "Includes adequate protein and carbohydrates to support basketball performance and recovery",
+      "Nutritionally appropriate for a 95kg athlete"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport-specific athlete (basketball player) with dietary restrictions (vegetarian), confirming the meal plan accommodates the restriction while meeting athletic performance nutritional requirements in a compact format"
+  }
+]
