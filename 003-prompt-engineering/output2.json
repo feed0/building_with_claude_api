@@ -1,0 +1,65 @@
+[
+  {
+    "output": "# One-Day Marathon Preparation Meal Plan\n**Athlete Profile:** 180cm, 72kg | High-intensity endurance training | Carbohydrate loading\n\n---\n\n## Daily Nutrition Targets\n- **Calories:** 3,200-3,400 kcal\n- **Carbohydrates:** 55-60% (440-510g) \u2014 emphasis on complex carbs\n- **Protein:** 15-20% (120-150g) \u2014 recovery support\n- **Fat:** 20-25% (70-95g)\n\n---\n\n## BREAKFAST (6:30-7:00 AM)\n*Pre-training fuel*\n- **Oatmeal with berries:** 1 cup cooked oats with blueberries (80g carbs, 10g protein)\n- **Banana with almond butter:** 1 medium banana + 2 tbsp almond butter (35g carbs, 8g protein)\n- **Greek yogurt:** \u00bd cup (8g protein)\n- **Water:** 500ml\n\n**Calories: ~550 | Carbs: 115g | Protein: 26g**\n\n---\n\n## MORNING SNACK (10:00 AM)\n*Quick energy boost*\n- **Whole grain bread:** 2 slices with honey (50g carbs)\n- **Hard-boiled eggs:** 2 eggs (12g protein)\n- **Sports drink:** 250ml (15g carbs, electrolytes)\n\n**Calories: ~350 | Carbs: 65g | Protein: 17g**\n\n---\n\n## LUNCH (12:30 PM)\n*Balanced mid-day meal*\n- **Brown rice:** 1.5 cups cooked (60g carbs)\n- **Grilled chicken breast:** 150g (45g protein)\n- **Mixed vegetables:** broccoli, carrots, bell peppers (15g carbs)\n- **Olive oil drizzle:** 1 tbsp (120 kcal)\n- **Water:** 600ml\n\n**Calories: ~650 | Carbs: 75g | Protein: 50g**\n\n---\n\n## AFTERNOON SNACK (3:30 PM)\n*Pre-training boost (before evening workout)*\n- **Energy bars:** 2 homemade granola bars (80g carbs, 8g protein)\n- **Apple:** 1 medium (25g carbs)\n- **Sports drink:** 250ml (15g carbs, electrolytes)\n\n**Calories: ~420 | Carbs: 120g | Protein: 10g**\n\n---\n\n## DINNER (7:00 PM)\n*Post-training recovery + carb loading*\n- **Pasta (whole wheat):** 1.5 cups cooked (75g carbs)\n- **Lean ground turkey:** 120g (35g protein)\n- **Tomato-based sauce:** 150ml (10g carbs)\n- **Side salad:** mixed greens with balsamic (5g carbs)\n- **White wine or water:** 150ml\n\n**Calories: ~620 | Carbs: 90g | Protein: 45g**\n\n---\n\n## EVENING SNACK (9:00 PM)\n*Recovery and sleep preparation*\n- **Cottage cheese:** \u00be cup low-fat (12g protein)\n- **Rice cakes:** 2 cakes (24g carbs)\n- **Berries:** \u00bd cup mixed (10g carbs)\n- **Herbal tea:** chamomile (0 cal)\n\n**Calories: ~200 | Carbs: 34g | Protein: 14g**\n\n---\n\n## Daily Totals\n- **Calories:** 3,390\n- **Carbohydrates:** 499g (59%)\n- **Protein:** 162g (19%)\n- **Fat:** 85g (22%)\n- **Hydration:** 2L+ water + electrolytes\n\n---\n\n## Key Performance Tips\n\u2713 **Timing:** Eat carbs 2-3 hours before intense workouts  \n\u2713 **Hydration:** Drink 500-750ml every 15-20 ",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180",
+        "weight": "72",
+        "goal": "Marathon preparation with carbohydrate loading for high-intensity endurance training",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains 4-5 meals/snacks optimized for energy density and sustained fuel delivery",
+        "Carbohydrates comprise 60-70% of total calories with emphasis on complex carbs and natural sugars",
+        "Total daily caloric intake aligns with elevated endurance athlete requirements (approximately 3,000-3,500 calories)",
+        "Plan is presented in compact, concise format suitable for 1-day consumption"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a high-intensity endurance athlete (marathon runner) who requires elevated calorie intake and carbohydrate loading, verifying the meal plan prioritizes energy density and sustained fuel"
+    },
+    "score": 9,
+    "reasoning": "The solution comprehensively satisfies all three mandatory requirements with precise daily totals, detailed macronutrient breakdown, and complete meal specifications including portions and timing. The meal plan is appropriately compact and well-formatted. Regarding secondary criteria: the plan includes 6 meals (exceeding the 4-5 recommendation but arguably beneficial for endurance athletes), achieves 59% carbohydrate composition (just below the 60-70% target), emphasizes complex carbs effectively, and aligns with the 3,000-3,500 calorie range at 3,390 kcal. The minor carbohydrate percentage shortfall and truncated final sentence are negligible issues that don't undermine the overall quality. The solution demonstrates strong nutritional knowledge for marathon preparation."
+  },
+  {
+    "output": "# One-Day Athletic Meal Plan for Basketball Player\n**Vegetarian | 198cm, 95kg | Performance & Recovery Focus**\n\n---\n\n## NUTRITION TARGETS\n- **Calories:** ~3,200-3,400 kcal\n- **Protein:** 140-160g (1.5g/kg bodyweight)\n- **Carbs:** 450-500g (high for training demands)\n- **Fats:** 85-100g\n- **Hydration:** 3.5-4L water minimum\n\n---\n\n## BREAKFAST (6:30-7:00 AM)\n*Pre-morning training*\n\n- **Greek yogurt bowl** (200g)\n  - Mixed berries (100g)\n  - Granola (40g)\n  - Raw almonds (20g)\n  - Honey (1 tbsp)\n\n- **Whole wheat toast** (2 slices) + almond butter (1.5 tbsp)\n\n- **Orange juice** (250ml)\n\n**Macros:** 520 cal | 18g protein | 72g carbs | 18g fat\n\n---\n\n## MID-MORNING SNACK (10:00 AM)\n*Post-training recovery*\n\n- **Protein smoothie:**\n  - Vanilla whey protein powder (30g)\n  - Banana (1 medium)\n  - Spinach (1 cup)\n  - Oat milk (300ml)\n  - Peanut butter (1 tbsp)\n\n- **Whole grain crackers** (5-6)\n\n**Macros:** 420 cal | 28g protein | 45g carbs | 12g fat\n\n---\n\n## LUNCH (1:00-1:30 PM)\n*Main meal*\n\n- **Quinoa & black bean bowl** (200g cooked quinoa + 150g black beans)\n  - Bell peppers (1 cup, diced)\n  - Cherry tomatoes (1 cup)\n  - Avocado (\u00bd)\n  - Cilantro lime dressing (olive oil, lime juice)\n\n- **Grilled halloumi cheese** (100g) or tempeh (120g)\n\n- **Side salad** with mixed greens & olive oil\n\n**Macros:** 680 cal | 32g protein | 85g carbs | 22g fat\n\n---\n\n## AFTERNOON SNACK (3:30 PM)\n*Pre-training fuel*\n\n- **Chickpea energy balls** (3-4 homemade or store-bought)\n  - *or* whole wheat pita (2) + hummus (4 tbsp)\n\n- **Apple** (1 large) with sunflower seed butter (1 tbsp)\n\n- **Electrolyte drink** (coconut water, 300ml)\n\n**Macros:** 380 cal | 14g protein | 55g carbs | 12g fat\n\n---\n\n## DINNER (7:00-7:30 PM)\n*Post-evening practice recovery*\n\n- **Lentil & vegetable stir-fry** (200g cooked red lentils)\n  - Broccoli, snap peas, carrots (2 cups total)\n  - Tofu (150g, pressed & pan-fried)\n  - Ginger-garlic sauce (low sodium soy sauce, sesame oil)\n\n- **Brown rice** (150g cooked)\n\n- **Green tea** (1 cup)\n\n**Macros:** 520 cal | 32g protein | 68g carbs | 10g fat\n\n---\n\n## EVENING RECOVERY (9:00 PM)\n*Optional before bed*\n\n- **Cottage cheese** (150g) with berries (100g)\n- **Casein protein shake** (optional for overnight recovery)\n\n**Macros:** 180 cal | 26g protein | 14g carbs | 2g fat\n\n---\n\n## DAILY TOTALS\n- **Calories:** 3,280\n- **Protein:** 150g \u2713\n- **Carbohydrates:** 439g \u2713\n- **Fat:** 76g \u2713\n\n---\n\n## HYDRATION & SUPPLEMENTS\n- **Water:**",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "198",
+        "weight": "95",
+        "goal": "optimize athletic performance and recovery for basketball",
+        "restrictions": "vegetarian"
+      },
+      "solution_criteria": [
+        "Meal plan covers all meals for one full day in compact format",
+        "All meals are vegetarian with no meat, poultry, or fish",
+        "Includes adequate protein and carbohydrates to support basketball performance and recovery",
+        "Nutritionally appropriate for a 95kg athlete"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a sport-specific athlete (basketball player) with dietary restrictions (vegetarian), confirming the meal plan accommodates the restriction while meeting athletic performance nutritional requirements in a compact format"
+    },
+    "score": 8,
+    "reasoning": "The solution fully satisfies all three mandatory requirements: it provides a complete one-day meal plan with exact foods and portions across 6 eating occasions, maintains strict vegetarian compliance throughout, and includes both daily totals and per-meal macronutrient breakdowns. The nutritional targets are appropriate for a 95kg athlete focused on basketball performance and recovery. The primary deficiency is the incomplete final section, which is a presentation issue rather than a content failure. The macro calculations are sound overall despite minor rounding variations. The plan demonstrates good understanding of athletic nutrition principles with strategic carbohydrate and protein distribution."
+  },
+  {
+    "output": "# One-Day Muscle-Building Meal Plan\n**For: 85 kg male athlete, 180 cm | Bulk Phase**\n\n---\n\n## Daily Targets\n- **Calories:** 3,200-3,400 kcal\n- **Protein:** 170g (2g per kg bodyweight)\n- **Carbs:** 400g\n- **Fat:** 90g\n\n---\n\n## BREAKFAST (7:00 AM)\n**Oatmeal Protein Power Bowl**\n- 80g oats with water\n- 2 whole eggs + 2 egg whites, scrambled\n- 1 banana\n- 1 tbsp almond butter\n- Pinch of cinnamon\n\n| Macro | Amount |\n|-------|--------|\n| Calories | 620 kcal |\n| Protein | 28g |\n| Carbs | 72g |\n| Fat | 16g |\n\n---\n\n## SNACK 1 (10:00 AM)\n**Greek Yogurt Parfait**\n- 200g Greek yogurt (0% fat)\n- 50g granola\n- 40g blueberries\n- 1 tbsp honey\n\n| Macro | Amount |\n|-------|--------|\n| Calories | 280 kcal |\n| Protein | 20g |\n| Carbs | 38g |\n| Fat | 3g |\n\n---\n\n## LUNCH (1:00 PM)\n**Grilled Chicken & Rice Bowl**\n- 200g chicken breast, grilled\n- 200g white rice (cooked)\n- 150g broccoli, steamed\n- 1 tbsp olive oil (for cooking)\n- Salt & pepper to taste\n\n| Macro | Amount |\n|-------|--------|\n| Calories | 750 kcal |\n| Protein | 52g |\n| Carbs | 85g |\n| Fat | 12g |\n\n---\n\n## SNACK 2 (4:00 PM)\n**Protein Shake**\n- 40g whey protein powder\n- 250ml whole milk\n- 1 medium apple\n- 1 tbsp peanut butter\n\n| Macro | Amount |\n|-------|--------|\n| Calories | 420 kcal |\n| Protein | 35g |\n| Carbs | 35g |\n| Fat | 14g |\n\n---\n\n## DINNER (7:00 PM)\n**Lean Beef & Pasta**\n- 200g lean ground beef (5% fat), cooked\n- 150g whole wheat pasta (cooked)\n- 100g spinach saut\u00e9ed in garlic\n- 80ml tomato sauce\n- Light parmesan cheese (10g)\n\n| Macro | Amount |\n|-------|--------|\n| Calories | 550 kcal |\n| Protein | 42g |\n| Carbs | 60g |\n| Fat | 15g |\n\n---\n\n## DAILY TOTALS\n| Nutrient | Target | Actual |\n|----------|--------|--------|\n| **Calories** | 3,200-3,400 | 3,220 |\n| **Protein** | 170g | 177g |\n| **Carbs** | 400g | 390g |\n| **Fat** | 90g | 60g |\n\n---\n\n## Key Notes\n\u2705 **Protein distributed evenly** across 5 eating occasions (~30-35g per meal)  \n\u2705 **Carbs timed** around training (adjust timing based on workout schedule)  \n\u2705 **Whole food sources** prioritized for micronutrients  \n\u2705 **Flexibility:** Can swap chicken for turkey, fish, or beef; rice for sweet potato or quinoa  \n\u26a0\ufe0f **Adjust portions** based on training intensity and individual response",
+    "test_case": {
+      "prompt_inputs": {
+        "height": "180 cm",
+        "weight": "85 kg",
+        "goal": "Muscle building during bulk phase with emphasis on protein distribution",
+        "restrictions": "None"
+      },
+      "solution_criteria": [
+        "Meal plan contains exactly 4-5 meals distributed throughout the day",
+        "Each meal contains 30-40g of protein with at least 3 meals meeting this target",
+        "Total daily calories create a surplus of 300-500 calories above maintenance for muscle building",
+        "Plan is presented in compact, easy-to-read format suitable for a single day"
+      ],
+      "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+      "scenario": "Testing with a strength/power athlete (weightlifter) during a bulk phase, ensuring the meal plan emphasizes protein distribution across meals and includes strategic caloric surplus for muscle building"
+    },
+    "score": 8,
+    "reasoning": "The solution comprehensively meets all mandatory requirements with exact foods, portions, timing, daily totals, and macronutrient breakdowns clearly presented. It contains 5 meals with excellent protein distribution (all meals 20g+, most 30-40g). The caloric target of 3,220 kcal appears reasonable for an 85kg athlete in bulk phase, though the maintenance baseline isn't explicitly calculated. The primary deficiency is the fat intake falling 25% below the stated 90g target (actual: 60g), which is a notable gap for a muscle-building phase where adequate fat supports hormone production. The carb target is essentially met. The format is compact and athlete-friendly. These issues are secondary to the mandatory requirements but represent meaningful nutritional gaps for the stated goal."
+  }
+]
