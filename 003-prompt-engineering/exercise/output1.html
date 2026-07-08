@@ -1,0 +1,287 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">2.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">0.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a highly technical STEM passage containing domain-specific jargon, mathematical notation, and specialized concepts to assess whether the model extracts precise technical topics versus overly general ones</td>
+                <td class="prompt-inputs"><strong>content:</strong> We present a novel approach to quantum error correction using topological codes based on the surface code architecture with threshold error rates exceeding 1%. Our implementation leverages stabilizer measurement through ancilla qubits arranged in a 2D lattice, enabling detection of both bit-flip and phase-flip errors via syndrome extraction. The decoding algorithm employs a modified minimum-weight perfect matching heuristic with computational complexity O(n³), significantly outperforming classical error correction in regimes where logical error rates fall below 10⁻⁴. We demonstrate fault-tolerant logical operations through transversal CNOT gates and magic state distillation protocols, achieving a break-even point where physical qubit overhead is justified by exponential suppression of logical error rates as system size scales.</td>
+                <td class="criteria">• Extracts precise technical topics (e.g., 'surface code', 'syndrome extraction', 'minimum-weight perfect matching') rather than generic terms like 'quantum computing'<br>• Includes domain-specific concepts and methods mentioned in the passage<br>• Returns output as a JSON array of strings</td>
+                <td class="output"><pre># Topics in this Text
+
+## Core Quantum Computing Topics
+- **Quantum Error Correction** - the main focus
+- **Topological Codes** - specifically surface codes
+- **Stabilizer Codes** - measurement-based error detection
+
+## Technical Components
+- **Ancilla Qubits** - auxiliary qubits for error detection
+- **Syndrome Extraction** - identifying error patterns
+- **Error Types** - bit-flip and phase-flip errors
+- **Decoding Algorithms** - minimum-weight perfect matching approach
+
+## Performance & Implementation
+- **Threshold Error Rates** - >1% performance benchmark
+- **Logical Error Rates** - sub-10⁻⁴ regime
+- **Computational Complexity** - O(n³) analysis
+- **Fault Tolerance** - reliable quantum operations
+
+## Advanced Quantum Operations
+- **Transversal CNOT Gates** - fault-tolerant gate implementation
+- **Magic State Distillation** - protocol for universal quantum computation
+- **Scalability** - exponential error suppression with system size
+
+## System Architecture
+- **2D Lattice Structure** - physical qubit arrangement
+- **Physical Qubit Overhead** - resource requirements vs. benefits
+
+These topics collectively address the challenge of making quantum computers practical and reliable.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution demonstrates strong topical understanding and identifies many relevant technical concepts from the passage. However, it catastrophically fails all three mandatory requirements: (1) it is not a JSON array of strings, (2) it contains extensive extra commentary and organizational structure, and (3) it includes non-topic content like headers and explanatory text. The task explicitly requires 'JSON array and nothing else' - this solution provides markdown-formatted text with categories and descriptions. This is an automatic failure regardless of content quality.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a interdisciplinary humanities passage containing overlapping topics like philosophy, history, and literature to evaluate whether the model can disambiguate and separate distinct conceptual domains</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Enlightenment's philosophical commitment to reason fundamentally reshaped Renaissance humanism, as thinkers like Descartes and Locke challenged medieval scholasticism through empirical inquiry. This intellectual shift coincided with the rise of the novel as a literary form, where authors such as Richardson and Defoe explored the interior consciousness of individual protagonists—a narrative innovation that reflected broader epistemological changes about how knowledge and selfhood were understood. Historically, these developments occurred alongside the scientific revolution, which legitimized observation over authority, while simultaneously, Romantic poets like Wordsworth reacted against mechanistic rationalism by valorizing imagination and emotional authenticity as pathways to truth.</td>
+                <td class="criteria">• Extracts distinct conceptual domains (philosophy, literature, history, science) as separate topics without conflating overlapping ideas<br>• Identifies specific movements and methodologies (Enlightenment rationalism, empiricism, Romanticism, scientific revolution) as distinct topics<br>• Returns output as a valid JSON array of strings<br>• Avoids redundant or overly granular topics while capturing the primary intellectual and historical themes</td>
+                <td class="output"><pre># Topics in This Passage
+
+1. **The Enlightenment** - emphasis on reason and rational thought
+
+2. **Renaissance Humanism** - its philosophical foundations and evolution
+
+3. **Medieval Scholasticism** - contrasted as the older intellectual tradition being challenged
+
+4. **Empirical Inquiry** - observation-based methods of investigation
+
+5. **The Novel as a Literary Form** - its rise and development
+
+6. **Interior Consciousness/Psychological Realism** - how authors portrayed inner mental life
+
+7. **Epistemology** - theories about how knowledge is formed and understood
+
+8. **The Concept of Selfhood** - how identity was understood intellectually
+
+9. **The Scientific Revolution** - shift from authority-based to observation-based knowledge
+
+10. **Romanticism** - as a reaction against Enlightenment rationalism
+
+11. **Imagination and Emotion** - valorized as alternative pathways to truth
+
+The passage traces an intellectual history showing how Enlightenment rationalism reshaped earlier thinking, influenced literature and science, and then prompted a Romantic counter-movement.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution fails all three mandatory requirements. While the content identifies appropriate topics, the format is fundamentally incorrect. The task explicitly requires: (1) a JSON array of strings, (2) strings containing only topics without extra commentary, and (3) the response to contain the JSON array and nothing else. The provided solution uses markdown formatting with numbered lists, includes explanatory descriptions for each topic, and adds a concluding paragraph. This is a complete format violation despite the topical content being substantively sound.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing implicit topics and themes that require inference rather than direct mentions, to evaluate whether the model identifies only explicitly stated topics or also infers underlying subjects</td>
+                <td class="prompt-inputs"><strong>content:</strong> The study examined patient outcomes following implementation of a new hospital workflow protocol. Data collection spanned eighteen months across three departments, with researchers documenting response times, error rates, and staff satisfaction metrics. Interestingly, while efficiency metrics improved by 23%, the analysis revealed unexpected correlations between increased standardization and reduced clinical autonomy. Staff interviews highlighted tension between protocol adherence and individualized patient care approaches, suggesting that optimization of one variable may inadvertently constrain another. The findings raise questions about the long-term sustainability of such interventions when human factors and organizational culture are not adequately addressed.</td>
+                <td class="criteria">• Extracts explicitly mentioned topics (workflow protocols, efficiency metrics, staff satisfaction)<br>• Identifies inferred underlying themes (organizational change management, trade-offs between standardization and autonomy, sustainability challenges)<br>• Distinguishes between direct topic mentions and implicit conceptual themes requiring inference<br>• Returns results as a valid JSON array of strings</td>
+                <td class="output"><pre># Topics in this text:
+
+1. **Healthcare Quality Improvement** - Implementation and evaluation of new hospital workflows
+
+2. **Operational Efficiency** - Measuring response times and performance metrics (23% improvement)
+
+3. **Patient Safety & Error Reduction** - Tracking error rates as an outcome measure
+
+4. **Organizational Change Management** - How protocol implementation affects hospital operations
+
+5. **Staff Welfare & Job Satisfaction** - Employee morale and workplace metrics
+
+6. **Clinical Autonomy vs. Standardization** - The tension between rigid protocols and individualized care
+
+7. **Human Factors in Healthcare** - How organizational culture and staff perspectives impact implementation
+
+8. **Research Methodology** - Multi-department longitudinal study design (18-month data collection)
+
+9. **Unintended Consequences** - Trade-offs between optimization goals
+
+10. **Organizational Sustainability** - Long-term viability of healthcare interventions
+
+**Key Theme:** The balance between efficiency/standardization and the human/clinical elements of healthcare delivery.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution demonstrates strong topic extraction and conceptual understanding, identifying 10 relevant topics with appropriate balance between explicit and inferred themes. However, it catastrophically fails the mandatory requirements by not providing output as a JSON array of strings. The response uses markdown formatting with numbered lists, bold text, and commentary instead of returning only a valid JSON array. This is an explicit violation of the stated mandatory requirement that 'Response should contain the JSON array and nothing else.' Regardless of content quality, this format violation automatically triggers a score of 3 or lower per the mandatory requirements specification.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a short passage (2-3 sentences) containing very few distinct topics versus a dense passage with 8+ topics to assess whether the model maintains consistent topic extraction behavior across different passage complexity and length scenarios</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study examines the intersection of machine learning algorithms, natural language processing techniques, and neural network architectures in modern computational linguistics. We investigate how transformer models revolutionized sentiment analysis, machine translation, and named entity recognition tasks. Additionally, we explore the role of transfer learning, fine-tuning strategies, and attention mechanisms in improving model performance across diverse linguistic domains including syntactic parsing, semantic role labeling, and discourse analysis. Our findings demonstrate significant improvements in benchmark datasets for text classification, question answering systems, and information extraction pipelines.</td>
+                <td class="criteria">• Extracts all distinct topics mentioned in the passage (minimum 8 topics expected)<br>• Returns topics as a JSON array of strings with no duplicates<br>• Topics are concise noun phrases or technical terms directly from the text</td>
+                <td class="output"><pre># Topics in This Study
+
+1. **Machine Learning & AI**
+   - Machine learning algorithms
+   - Neural network architectures
+   - Transformer models
+
+2. **Natural Language Processing (NLP)**
+   - Natural language processing techniques
+   - Computational linguistics
+
+3. **NLP Tasks & Applications**
+   - Sentiment analysis
+   - Machine translation
+   - Named entity recognition
+   - Syntactic parsing
+   - Semantic role labeling
+   - Discourse analysis
+   - Text classification
+   - Question answering systems
+   - Information extraction
+
+4. **Model Optimization Techniques**
+   - Transfer learning
+   - Fine-tuning strategies
+   - Attention mechanisms
+
+5. **Evaluation & Benchmarking**
+   - Benchmark datasets
+   - Model performance metrics
+
+This appears to be a comprehensive study on **modern NLP and deep learning**, focusing on how advanced neural architectures and training techniques improve performance across various language understanding and processing tasks.</pre></td>
+                <td class="score-col"><span class="score score-low">2</span></td>
+                <td class="reasoning">The solution identifies appropriate topics and demonstrates good understanding of the content, meeting the secondary criteria for topic extraction quality. However, it catastrophically fails the mandatory requirements by not returning a JSON array of strings as the sole output. Instead, it provides a formatted document with headers, bullet points, and explanatory paragraphs. The instructions explicitly state 'Response should contain the JSON array and nothing else' - this solution violates that requirement entirely. This is an automatic failure condition per the mandatory requirements specification.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

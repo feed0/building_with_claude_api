@@ -1,0 +1,245 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">4</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.5 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">100.0%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a highly technical STEM passage containing domain-specific jargon, mathematical notation, and specialized concepts to assess whether the model extracts precise technical topics versus overly general ones</td>
+                <td class="prompt-inputs"><strong>content:</strong> We present a novel approach to quantum error correction using topological codes based on the surface code architecture with threshold error rates exceeding 1%. Our implementation leverages stabilizer measurement through ancilla qubits arranged in a 2D lattice, enabling detection of both bit-flip and phase-flip errors via syndrome extraction. The decoding algorithm employs a modified minimum-weight perfect matching heuristic with computational complexity O(n³), significantly outperforming classical error correction in regimes where logical error rates fall below 10⁻⁴. We demonstrate fault-tolerant logical operations through transversal CNOT gates and magic state distillation protocols, achieving a break-even point where physical qubit overhead is justified by exponential suppression of logical error rates as system size scales.</td>
+                <td class="criteria">• Extracts precise technical topics (e.g., 'surface code', 'syndrome extraction', 'minimum-weight perfect matching') rather than generic terms like 'quantum computing'<br>• Includes domain-specific concepts and methods mentioned in the passage<br>• Returns output as a JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "Quantum error correction",
+  "Topological codes",
+  "Surface codes",
+  "Stabilizer measurement",
+  "Syndrome extraction",
+  "Minimum-weight perfect matching",
+  "Fault-tolerant quantum computation",
+  "Magic state distillation",
+  "Transversal gates"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it returns a valid JSON array of strings containing only topics without commentary. It also satisfies the secondary criteria by extracting precise technical topics rather than generic terms. However, the extraction is incomplete—several domain-specific concepts explicitly mentioned in the passage are missing ('ancilla qubits', 'threshold error rates', 'logical error rates'). The solution captures approximately 75% of the extractable topics. While the quality of included topics is high, the incompleteness represents a meaningful deficiency in meeting the stated goal of extracting topics 'out of a passage' comprehensively.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a interdisciplinary humanities passage containing overlapping topics like philosophy, history, and literature to evaluate whether the model can disambiguate and separate distinct conceptual domains</td>
+                <td class="prompt-inputs"><strong>content:</strong> The Enlightenment's philosophical commitment to reason fundamentally reshaped Renaissance humanism, as thinkers like Descartes and Locke challenged medieval scholasticism through empirical inquiry. This intellectual shift coincided with the rise of the novel as a literary form, where authors such as Richardson and Defoe explored the interior consciousness of individual protagonists—a narrative innovation that reflected broader epistemological changes about how knowledge and selfhood were understood. Historically, these developments occurred alongside the scientific revolution, which legitimized observation over authority, while simultaneously, Romantic poets like Wordsworth reacted against mechanistic rationalism by valorizing imagination and emotional authenticity as pathways to truth.</td>
+                <td class="criteria">• Extracts distinct conceptual domains (philosophy, literature, history, science) as separate topics without conflating overlapping ideas<br>• Identifies specific movements and methodologies (Enlightenment rationalism, empiricism, Romanticism, scientific revolution) as distinct topics<br>• Returns output as a valid JSON array of strings<br>• Avoids redundant or overly granular topics while capturing the primary intellectual and historical themes</td>
+                <td class="output"><pre>```json
+[
+  "Enlightenment philosophy",
+  "Reason and empiricism",
+  "Renaissance humanism",
+  "Scholasticism",
+  "The novel as literary form",
+  "Interior consciousness in literature",
+  "Epistemology",
+  "Scientific revolution",
+  "Romanticism",
+  "Imagination and emotion as knowledge",
+  "Rationalism vs. Romanticism"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-medium">7</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it returns a valid JSON array of strings containing topics, with no extra commentary. It successfully addresses the secondary criteria by identifying distinct conceptual domains and specific movements. However, there are minor issues with redundancy ('Reason and empiricism' overlaps with the broader empiricism concept, and 'Rationalism vs. Romanticism' somewhat duplicates existing topics) and the omission of specific thinkers who are explicitly named and discussed. The solution is solid but not optimal—it captures the main themes effectively but could be more precise in avoiding overlap and more comprehensive in including named figures.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a passage containing implicit topics and themes that require inference rather than direct mentions, to evaluate whether the model identifies only explicitly stated topics or also infers underlying subjects</td>
+                <td class="prompt-inputs"><strong>content:</strong> The study examined patient outcomes following implementation of a new hospital workflow protocol. Data collection spanned eighteen months across three departments, with researchers documenting response times, error rates, and staff satisfaction metrics. Interestingly, while efficiency metrics improved by 23%, the analysis revealed unexpected correlations between increased standardization and reduced clinical autonomy. Staff interviews highlighted tension between protocol adherence and individualized patient care approaches, suggesting that optimization of one variable may inadvertently constrain another. The findings raise questions about the long-term sustainability of such interventions when human factors and organizational culture are not adequately addressed.</td>
+                <td class="criteria">• Extracts explicitly mentioned topics (workflow protocols, efficiency metrics, staff satisfaction)<br>• Identifies inferred underlying themes (organizational change management, trade-offs between standardization and autonomy, sustainability challenges)<br>• Distinguishes between direct topic mentions and implicit conceptual themes requiring inference<br>• Returns results as a valid JSON array of strings</td>
+                <td class="output"><pre>```json
+[
+  "hospital workflow protocol",
+  "patient outcomes",
+  "clinical efficiency",
+  "error rates",
+  "staff satisfaction",
+  "standardization",
+  "clinical autonomy",
+  "protocol adherence",
+  "organizational culture",
+  "implementation sustainability"
+]
+```
+
+**Extraction Rationale:**
+- Included broad, meaningful topics that represent key themes
+- Excluded redundant variations (e.g., "response times" subsumed under "clinical efficiency")
+- Avoided excessive detail (e.g., didn't separate "18 months" or "23% improvement" as standalone topics)
+- Focused on conceptual themes relevant to research and practice</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution fully satisfies all mandatory requirements: it provides a valid JSON array of strings containing only topics with no extra commentary. It successfully identifies both explicit mentions and inferred themes as required by the secondary criteria. However, there are minor gaps in comprehensiveness—notably the omission of 'human factors' which is explicitly stated in the passage ('when human factors and organizational culture are not adequately addressed'). The extraction demonstrates thoughtful consolidation and abstraction, though some inferences could be more precisely grounded in the source text. The solution is strong overall but not exhaustive.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a short passage (2-3 sentences) containing very few distinct topics versus a dense passage with 8+ topics to assess whether the model maintains consistent topic extraction behavior across different passage complexity and length scenarios</td>
+                <td class="prompt-inputs"><strong>content:</strong> This study examines the intersection of machine learning algorithms, natural language processing techniques, and neural network architectures in modern computational linguistics. We investigate how transformer models revolutionized sentiment analysis, machine translation, and named entity recognition tasks. Additionally, we explore the role of transfer learning, fine-tuning strategies, and attention mechanisms in improving model performance across diverse linguistic domains including syntactic parsing, semantic role labeling, and discourse analysis. Our findings demonstrate significant improvements in benchmark datasets for text classification, question answering systems, and information extraction pipelines.</td>
+                <td class="criteria">• Extracts all distinct topics mentioned in the passage (minimum 8 topics expected)<br>• Returns topics as a JSON array of strings with no duplicates<br>• Topics are concise noun phrases or technical terms directly from the text</td>
+                <td class="output"><pre>```json
+[
+  "Machine learning algorithms",
+  "Natural language processing",
+  "Neural network architectures",
+  "Transformer models",
+  "Sentiment analysis",
+  "Machine translation",
+  "Named entity recognition",
+  "Transfer learning",
+  "Attention mechanisms",
+  "Syntactic parsing",
+  "Semantic role labeling",
+  "Discourse analysis",
+  "Text classification",
+  "Question answering systems",
+  "Information extraction"
+]
+```</pre></td>
+                <td class="score-col"><span class="score score-high">8</span></td>
+                <td class="reasoning">The solution meets all mandatory requirements: it contains a valid JSON array of strings with only topics and no extra commentary. It also meets the secondary criteria by extracting distinct topics as concise noun phrases with no duplicates and exceeding the minimum of 8 topics. However, it has minor deficiencies in comprehensiveness - 'fine-tuning strategies' and 'computational linguistics' are explicitly mentioned in the text but were omitted. The solution captures 15 out of 17 identifiable topics, representing approximately 88% coverage of the distinct topics in the passage.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    

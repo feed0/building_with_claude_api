@@ -1,0 +1,72 @@
+[
+  {
+    "output": "```json\n[\n  \"quantum error correction\",\n  \"topological codes\",\n  \"surface code\",\n  \"threshold error rates\",\n  \"stabilizer measurement\",\n  \"ancilla qubits\",\n  \"2D lattice\",\n  \"bit-flip errors\",\n  \"phase-flip errors\",\n  \"syndrome extraction\",\n  \"decoding algorithm\",\n  \"minimum-weight perfect matching\",\n  \"logical error rates\",\n  \"fault-tolerant operations\",\n  \"transversal CNOT gates\",\n  \"magic state distillation\",\n  \"physical qubit overhead\",\n  \"computational complexity\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "We present a novel approach to quantum error correction using topological codes based on the surface code architecture with threshold error rates exceeding 1%. Our implementation leverages stabilizer measurement through ancilla qubits arranged in a 2D lattice, enabling detection of both bit-flip and phase-flip errors via syndrome extraction. The decoding algorithm employs a modified minimum-weight perfect matching heuristic with computational complexity O(n\u00b3), significantly outperforming classical error correction in regimes where logical error rates fall below 10\u207b\u2074. We demonstrate fault-tolerant logical operations through transversal CNOT gates and magic state distillation protocols, achieving a break-even point where physical qubit overhead is justified by exponential suppression of logical error rates as system size scales."
+      },
+      "solution_criteria": [
+        "Extracts precise technical topics (e.g., 'surface code', 'syndrome extraction', 'minimum-weight perfect matching') rather than generic terms like 'quantum computing'",
+        "Includes domain-specific concepts and methods mentioned in the passage",
+        "Returns output as a JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a highly technical STEM passage containing domain-specific jargon, mathematical notation, and specialized concepts to assess whether the model extracts precise technical topics versus overly general ones"
+    },
+    "score": 9,
+    "reasoning": "The solution meets all mandatory requirements: it returns a valid JSON array of strings containing topics, with no extra commentary, and nothing else in the response. It strongly satisfies the secondary criteria by extracting precise technical topics (surface code, stabilizer measurement, transversal CNOT gates, magic state distillation, etc.) rather than generic quantum computing terms. The extraction is comprehensive and domain-specific. The only minor issue is the inclusion of 'computational complexity' as a standalone topic when it's more of a general concept rather than a specific topic from the article\u2014the article discusses a specific complexity class O(n\u00b3) for the decoding algorithm. This is a very minor deficiency that doesn't significantly impact the overall quality of the extraction."
+  },
+  {
+    "output": "```json\n[\n  \"Enlightenment philosophy\",\n  \"Reason and empiricism\",\n  \"Renaissance humanism\",\n  \"Descartes and Locke\",\n  \"Medieval scholasticism\",\n  \"Novel as literary form\",\n  \"Interior consciousness\",\n  \"Narrative innovation\",\n  \"Epistemology\",\n  \"Knowledge and selfhood\",\n  \"Scientific revolution\",\n  \"Observation and authority\",\n  \"Romanticism\",\n  \"Romantic poetry\",\n  \"Imagination and emotion\",\n  \"Rationalism\",\n  \"Mechanistic worldview\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The Enlightenment's philosophical commitment to reason fundamentally reshaped Renaissance humanism, as thinkers like Descartes and Locke challenged medieval scholasticism through empirical inquiry. This intellectual shift coincided with the rise of the novel as a literary form, where authors such as Richardson and Defoe explored the interior consciousness of individual protagonists\u2014a narrative innovation that reflected broader epistemological changes about how knowledge and selfhood were understood. Historically, these developments occurred alongside the scientific revolution, which legitimized observation over authority, while simultaneously, Romantic poets like Wordsworth reacted against mechanistic rationalism by valorizing imagination and emotional authenticity as pathways to truth."
+      },
+      "solution_criteria": [
+        "Extracts distinct conceptual domains (philosophy, literature, history, science) as separate topics without conflating overlapping ideas",
+        "Identifies specific movements and methodologies (Enlightenment rationalism, empiricism, Romanticism, scientific revolution) as distinct topics",
+        "Returns output as a valid JSON array of strings",
+        "Avoids redundant or overly granular topics while capturing the primary intellectual and historical themes"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a interdisciplinary humanities passage containing overlapping topics like philosophy, history, and literature to evaluate whether the model can disambiguate and separate distinct conceptual domains"
+    },
+    "score": 6,
+    "reasoning": "The solution meets all mandatory requirements: it returns a valid JSON array of strings containing topics from the passage with no extra commentary. However, it violates the secondary criterion of avoiding redundancy and excessive granularity. 'Enlightenment philosophy' and 'Reason and empiricism' are closely related concepts that could be consolidated. 'Romantic poetry' is a subset of 'Romanticism' rather than a distinct topic. The pairing of 'Descartes and Locke' as a single topic inappropriately conflates two separate historical figures. While the solution demonstrates good conceptual coverage, the redundancy and over-segmentation indicate insufficient refinement in topic extraction."
+  },
+  {
+    "output": "```json\n[\n  \"hospital workflow protocol\",\n  \"patient outcomes\",\n  \"data collection\",\n  \"response times\",\n  \"error rates\",\n  \"staff satisfaction\",\n  \"efficiency metrics\",\n  \"standardization\",\n  \"clinical autonomy\",\n  \"protocol adherence\",\n  \"individualized patient care\",\n  \"human factors\",\n  \"organizational culture\",\n  \"intervention sustainability\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "The study examined patient outcomes following implementation of a new hospital workflow protocol. Data collection spanned eighteen months across three departments, with researchers documenting response times, error rates, and staff satisfaction metrics. Interestingly, while efficiency metrics improved by 23%, the analysis revealed unexpected correlations between increased standardization and reduced clinical autonomy. Staff interviews highlighted tension between protocol adherence and individualized patient care approaches, suggesting that optimization of one variable may inadvertently constrain another. The findings raise questions about the long-term sustainability of such interventions when human factors and organizational culture are not adequately addressed."
+      },
+      "solution_criteria": [
+        "Extracts explicitly mentioned topics (workflow protocols, efficiency metrics, staff satisfaction)",
+        "Identifies inferred underlying themes (organizational change management, trade-offs between standardization and autonomy, sustainability challenges)",
+        "Distinguishes between direct topic mentions and implicit conceptual themes requiring inference",
+        "Returns results as a valid JSON array of strings"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a passage containing implicit topics and themes that require inference rather than direct mentions, to evaluate whether the model identifies only explicitly stated topics or also infers underlying subjects"
+    },
+    "score": 10,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it returns a valid JSON array of strings containing topics from the article with no extra commentary. It successfully identifies both explicit topics (hospital workflow protocol, patient outcomes, data collection, efficiency metrics, staff satisfaction, clinical autonomy, protocol adherence, individualized patient care) and inferred underlying themes (standardization, human factors, organizational culture, intervention sustainability). The extraction demonstrates good judgment in distinguishing direct mentions from conceptual themes requiring inference. The topics are relevant, accurately extracted, and appropriately scoped. No violations of mandatory requirements are present."
+  },
+  {
+    "output": "```json\n[\n  \"machine learning algorithms\",\n  \"natural language processing\",\n  \"neural network architectures\",\n  \"computational linguistics\",\n  \"transformer models\",\n  \"sentiment analysis\",\n  \"machine translation\",\n  \"named entity recognition\",\n  \"transfer learning\",\n  \"fine-tuning strategies\",\n  \"attention mechanisms\",\n  \"syntactic parsing\",\n  \"semantic role labeling\",\n  \"discourse analysis\",\n  \"text classification\",\n  \"question answering systems\",\n  \"information extraction\",\n  \"benchmark datasets\"\n]\n```",
+    "test_case": {
+      "prompt_inputs": {
+        "content": "This study examines the intersection of machine learning algorithms, natural language processing techniques, and neural network architectures in modern computational linguistics. We investigate how transformer models revolutionized sentiment analysis, machine translation, and named entity recognition tasks. Additionally, we explore the role of transfer learning, fine-tuning strategies, and attention mechanisms in improving model performance across diverse linguistic domains including syntactic parsing, semantic role labeling, and discourse analysis. Our findings demonstrate significant improvements in benchmark datasets for text classification, question answering systems, and information extraction pipelines."
+      },
+      "solution_criteria": [
+        "Extracts all distinct topics mentioned in the passage (minimum 8 topics expected)",
+        "Returns topics as a JSON array of strings with no duplicates",
+        "Topics are concise noun phrases or technical terms directly from the text"
+      ],
+      "task_description": "\n    Extract topics out of a passage of text from a scholarly article into a JSON array of strings\n    ",
+      "scenario": "Testing with a short passage (2-3 sentences) containing very few distinct topics versus a dense passage with 8+ topics to assess whether the model maintains consistent topic extraction behavior across different passage complexity and length scenarios"
+    },
+    "score": 10,
+    "reasoning": "The solution fully satisfies all mandatory requirements: it provides a JSON array of strings containing topics from the article with no extra commentary, and the response contains only the JSON array. It also meets all secondary criteria by extracting well over the minimum 8 topics, maintaining no duplicates, and using concise noun phrases and technical terms directly from the text. The topics are accurately identified and appropriately scoped. The minor inconsistencies noted are negligible and do not detract from an otherwise comprehensive and accurate extraction."
+  }
+]
